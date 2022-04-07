@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+
+
+    <!-- Demo styles -->
+    <style>
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        
+      }
+
+      .swiper-container {
+        width: 50%;
+        height: 50%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: inline;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: hidden;
+        object-fit: cover;
+      }
+      .swiper-slide > img {
+        display: inline ;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+      <div class="w3-bar w3-sand w3-top w3-left-align w3-large" id="menu1">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-theme-l1" onclick="ToggleNav(this)">DataTime</a>
+        <a href="#Installation" class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="ToggleNav(this)">Installation</a>
+        <a href="#googleapi" class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="ToggleNav(this)">DataSets</a>
+        <a href="#Extraction" class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="ToggleNav(this)">Extraction</a>
+        <a href="#Collection" class="w3-bar-item w3-button w3-hide-small w3-hover-white" onclick="ToggleNav(this)">DataDash</a>
+      </div>
+    </nav>
+    
+    <!-- Swiper -->
+    <div class="w3-container w3-padding-64">
+      <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/saharabid.jpg" alt="saharabid" width="200" height="300">
+          </div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+  </div>
+  <div class="w3-container w3-padding-64 w3-center">
+    <p>hello</p>
+    <br>
+    <p>hello</p>
+    <br><p>hello</p>
+    <br><p>hello</p>
+    <br><p>hello</p>
+    <br>
+  </div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        watchOverflow: true,
+      });
+    </script>
+  </body>
+</html>

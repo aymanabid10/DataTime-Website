@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>DataTime - Online API Documentation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/test.png"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="index.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-sand w3-top w3-left-align w3-large" id="menu1">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">DataTime</a>
+    <a href="#Installation" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Installation</a>
+    <a href="#googleapi" class="w3-bar-item w3-button w3-hide-small w3-hover-white">DataSets</a>
+    <a href="#Extraction" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Extraction</a>
+    <a href="#Collection" class="w3-bar-item w3-button w3-hide-small w3-hover-white">DataDash</a>
+    <a href="#media" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-sand w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-white w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-white" href="#git">GitHub Repository</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="#ve">Python VE</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="#install">Install DataTime</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="#googleapi">OpenImages Datasets</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="#intro-datatime">Extraction - Intro</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="#usage-datatime">Extraction - Usage/Explanations</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="#examples-datatime">Extraction - Examples</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="#intro-datadash">DataDash - Usage/Explanations</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="#usage-datadash">DataDash - Usage/Explanations</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+  <div class="w3-container w3-padding-64" id="Installation">
+    <div class="w3-container w3-theme-l1">
+      <h2>DataTime - Installation instructions</h2>
+    </div>
+    <ol id="lines">
+      <li id="git">Our GitHub Repository :</li>
+      <p class="w3-text-black">
+        if you are in Windows, you can download DataTime from GitHub as ZIP file by clicking <a href="https://github.com/aymanabid10/DataTime" target="_blank"><strong>here.</strong></a>
+        <br>
+        then open you command line and type :
+      </p>
+      <pre class="w3-container w3-black" id="code"><span class="w3-text-blue">cd</span> DataTime-master</pre>
+      
+      <p class="w3-text-black">
+        if you are in in Linux/MacOS or you have already install git in Windows
+      </p>
+      <pre class="w3-container w3-black" id="code"><span class="w3-text-blue">git</span> clone https://github.com/aymanabid10/DataTime.git</pre>
+      <p class="w3-text-black">
+        then browse into DataTime directory via :
+      </p>
+      <pre class="w3-container w3-black" id="code"><span class="w3-text-blue">cd</span> DataTime</pre>
+      <li id="ve">Setting your virtual environnement (Options):</li>
+      <p class="w3-text-black">
+        we suggest you have already a Virtual environnement if you don't, you can use Anaconda or Virtualenv library :
+        <ul>
+          <li class="w3-text-brown">Anaconda :</li>
+        </ul>
+<pre class="w3-container w3-black" id="code">
+<span class="w3-text-blue">conda</span> create -n < your-Virtual-env-name >
+<span class="w3-text-blue">conda</span> activate < your-Virtual-env-name ></pre>
+        <ul>
+          <li class="w3-text-brown">Virtualenv library :</li>
+        </ul>
+<pre class="w3-container w3-black" id="code">
+sudo <span class="w3-text-blue">pip</span> install virtualenv
+python -m venv < your-Virtual-env-name > 
+<span class="w3-text-blue">source</span> < your-Virtual-env-name >/bin/activate
+</pre>
+      </p>
+      <li id="install">Install DataTime :</li>
+      <p class="w3-text-black">
+      and Finally you have to install DataTime :
+      </p>
+      <pre class="w3-container w3-black" id="code"><span class="w3-text-blue">pip</span> install .</pre>
+      <p class="w3-text-black">
+        Congratulations you have already install DataTime !!
+      </p>
+    </ol>
+  </div>
+
+  <div class="w3-container w3-padding-64" id="googleapi">
+    <div class="w3-container w3-theme-l1">
+      <h2>Dataset From GoogleAPI OpenImages (Required) :</h2>
+    </div>
+    <ul>
+      <p class="w3-text-black">
+        in order to install your own dataset yout can visit this repository 
+        <a href="https://github.com/EscVM/OIDv4_ToolKit" target="_blank"><strong>here</strong></a> 
+        that uses the OIDv4_ToolKit by Google.
+        <br>
+        Also you can check out the GoogleAPI OpenImages website <a href="https://storage.googleapis.com/openimages/web/index.html" target="_blank"><strong>here.</strong></a>
+      </p>
+    </ul>
+  </div>
+
+  <div class="w3-container w3-padding-64" id="Extraction">
+      <div class="w3-container w3-theme-l1">
+        <h2>DataTime - Feature Extraction :</h2>
+      </div>
+    <ol id="lines">
+
+      <li id="intro-datatime">Introduction :</li>
+      <p class="w3-text-black">
+        image classification is one of thee most commun computer vision tasks in Machine Learning but the problem is Finding a great 
+        image dataset with the best resolution and the shape of the object in the image can be smaller than the actual image that can't 
+        give us a great Detection with a lower accuracy.
+      </p>
+      <p class="w3-text-black">DataTime is capable of fixing this problem using the GoogleAPI Open Images used for object detection ,so DataTime takes all these
+         images of the object detection and extract all the bounding boxes by crop them to create a powerfull image classification dataset 
+         but not only that, DataTime is capable of generating what ever your number data is, DataTime have the power to balance your number of 
+         of samples to make a powerfull Machine Learning or Deep Learning Task and finally your data will BackUp on files that 
+         makes your time valuable during the reload of your training script.
+      </p>
+      
+
+      <li id="usage-datatime">Usage - Explanations :</li>
+      <p>
+        In order to Extract the Dataset, we have to look at the class that we use to, the class is found at the <strong>ClassificationGen</strong>
+        directory with a python script called <strong>Generator.py</strong>, the class name called <strong>DataImageGenerator</strong>
+        this class takes the path of the dataset downloaded from the GoogleAPI OpenImages as you can see here:
+      </p>
+<pre class="w3-container w3-black" id="code">
+<span class="w3-text-teal">#Generator.py</span>
+<span class="w3-text-blue">class</span> <span class="w3-text-green">DataImageGenerator</span>() :
+    <span class="w3-text-blue">def</span> <span class="w3-text-purple">__init__</span>(<span class="w3-text-cyan">self</span>, 
+                 <span class="w3-text-cyan">path</span>:<span class="w3-text-green">str</span>):
+    ...
+</pre>
+      <p>But <strong>Generator</strong> script is used from another script called <strong>Extract.py</strong> from the Custom directory and uses
+        a class called <strong>ExtractDataImages</strong>, as you can see here the arguments of the class :
+      </p>
+<pre class="w3-container w3-black" id="code">
+<span class="w3-text-blue">class</span> <span class="w3-text-green">ExtractDataImages</span>(<span class="w3-text-green">DataImageGenerator</span>):
+    <span class="w3-text-blue">def</span> <span class="w3-text-purple">__init__</span>(<span class="w3-text-cyan">self</span>,
+                <span class="w3-text-cyan">path</span>:<span class="w3-text-green">str</span>,
+                <span class="w3-text-cyan">NewSize</span>:<span class="w3-text-green">tuple</span>,
+                <span class="w3-text-cyan">Save</span>:<span class="w3-text-green">bool</span>,
+                <span class="w3-text-cyan">output</span>=<span class="w3-text-yellow">"Output"</span>,
+                <span class="w3-text-cyan">display</span>=<span class="w3-text-green">False</span>):
+
+    <span class="w3-text-green">super</span>.<span class="w3-text-purple">__init__</span>(<span class="w3-text-yellow">path</span>)
+    ...
+</pre>
+      <p><strong>display</strong> arg is choice to display your data distribution before and after the balance process by setting it to True either False.</p>
+      <p>
+        In order to save time, <strong>NewSize</strong> arg takes a tuple with a length of 2 that helps the Developer to resize the images generated to 
+        compatible input size of the pre-trained Model for example (64,64) for each image.
+      </p>
+      <p>Developer have the choice to save the dataset using the arg <strong>Save</strong> by setting it to True either False.</p>
+      <p>the saved data of the arg <strong>Save</strong> generated as default in a directory called <strong>"Output"</strong> you can change it using
+      the arg <strong>output</strong>.
+      </p>
+      <p>
+        the Folder tree of project or the data tree:
+      </p>
+      <div class="w3-container w3-text-brown" style="overflow-x: auto;">
+        <ul>
+          <li>
+            <ul>
+              <li>project/
+                <ul>
+                  <li>Data/
+                    <ul>
+                      <li>className0/
+                        <ul>
+                          <li>Labels/
+                            <ul>
+                              <li>image0.txt</li>
+                              <li>image1.txt</li>
+                              <li>...</li>
+                              <li>imageX.txt</li> 
+                            </ul>
+                          </li>
+                          <li>image0.png</li>
+                          <li>image1.png</li>
+                          <li>...</li>
+                          <li>imageX.png</li>
+                        </ul>
+                      </li>
+                      <li>className1/</li>
+                      <li>...</li>
+                      <li>classNameX/</li>
+                    </ul>
+                  </li>
+                <li>training.py</li>
+                <li>...</li>
+              </ul>
+            </li>
+              
+              <li>...</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <p>and this is the method to call the DataTime datasets Extractor:</p>
+
+<pre class="w3-container w3-black" id="code">
+<span class="w3-text-teal">#training.py</span>
+<span class="w3-text-red">from</span> <span class="w3-text-orange">DataTime.Custom.Extract</span> <span class="w3-text-red">import</span> <span class="w3-text-orange">ExtractDataImages</span>
+
+<span class="w3-text-orange">Extractor</span> = <span class="w3-text-orange">ExtractDataImages</span>(<span class="w3-text-blue">path=<span class="w3-text-yellow">"data"</span></span>,
+                              <span class="w3-text-blue">NewSize=<span class="w3-text-yellow">(64,64)</span></span>,
+                              <span class="w3-text-blue">Save=<span class="w3-text-yellow">False</span></span>,
+                              <span class="w3-text-blue">display=<span class="w3-text-yellow">True</span></span>)
+</pre>
+        <p>
+          and now you have to call <strong>myCustomData</strong> method to that returned 3 arrays :
+        </p>
+<pre class="w3-container w3-black" id="code">
+<span class="w3-text-orange">Images<span class="w3-text-white">,</span> LabelsNames<span class="w3-text-white">,</span> LabelsEncoded <span class="w3-text-white">=</span> Extractor<span class="w3-text-white">.</span><span class="w3-text-pink">myCustomData</span><span class="w3-text-white">()</span></span>
+</pre>
+      <p>So the Output of the Extraction Process be like :</p>
+      <div class="w3-container w3-center">
+        <img src="images/testdatatime.PNG" alt="testdatatime" width="100%" height="100%">
+      </div>
+      <p><strong>Images</strong> array contains the generated datasets of diffrents classes after all the process of DataTime (balance process, cropping, ...), <strong>Images</strong> is used as the <strong>X</strong> array in training process .</p>
+      <p><strong>LabelsNames</strong> contains the class names of each image on the <strong>Images</strong> array, you can use it as the <strong>Y</strong> in the training process</p>
+      <p><strong>LabelsEncoded</strong> array help the Developer to save time that spends on encoding the labels names, so we can use the <strong>LabelsEncoded</strong> as the <strong>Y</strong> array in the training process.</p>
+      <p>After Runnig the <strong>DataTime</strong> Extractor, the library generates 3 pickle files for the Data Encryption and a JSON file :
+      <br>
+      <strong>BackupData.p</strong> contains all the images Extracted.
+      <br>
+      <strong>Labels.p</strong> contains all the class names of all the images. For example : 
+      ["ClassName0", "ClassName0", "ClassName0", ..., "ClassName1", "ClassName1", "ClassName1", .., "ClassNameX", "ClassNameX", "ClassNameX"]. 
+      <br>
+      <strong>ClassNames.p</strong> contains only the ClassNames. For Example : ["ClassName0", "ClassName1", .., "ClassNameX"].
+      <br>
+      <strong>Labels.json</strong> contains :
+      </p>
+<pre class="w3-container w3-black" id="code">
+{
+    <span class="w3-text-orange">"NoOfClasses"</span>: <span class="w3-text-blue">X</span>, <span class="w3-text-teal">// Number of Classes "X"</span>
+    <span class="w3-text-orange">"TotalImages"</span>: <span class="w3-text-blue">X</span>, <span class="w3-text-teal">//Number of Total images Extracted using DataTime after all the process </span>
+    <span class="w3-text-orange">"TotalLabelsList"</span>: <span class="w3-text-blue">X</span> <span class="w3-text-teal">//Number of Total of Labels names</span>
+}
+</pre>
+    <p>You can access of these values via :</p>
+<pre class="w3-container w3-black" id="code">
+<span class="w3-text-teal"># Number of Classes :</span>
+<span class="w3-text-blue">NoOfClasses</span> = <span class="w3-text-orange">Extractor</span>.<span class="w3-text-purple">dataTypeInformations</span>[<span class="w3-text-cyan">"NoOfClasses"</span>]
+<span class="w3-text-teal"># Number of the total images :</span>
+<span class="w3-text-blue">TotalImages</span> = <span class="w3-text-orange">Extractor</span>.<span class="w3-text-purple">dataTypeInformations</span>[<span class="w3-text-cyan">"TotalImages"</span>]
+<span class="w3-text-teal"># Number of total labels :</span>
+<span class="w3-text-blue">TotalLabelsList</span> = <span class="w3-text-orange">Extractor</span>.<span class="w3-text-purple">dataTypeInformations</span>[<span class="w3-text-cyan">"TotalLabelsList"</span>]
+<span class="w3-text-teal"># Labels List :</span>
+<span class="w3-text-blue">Labels</span> = <span class="w3-text-orange">Extractor</span>.<span class="w3-text-purple">LabelsExtracted</span>[<span class="w3-text-cyan">"Labels"</span>]
+<span class="w3-text-teal"># Labels List :</span>
+<span class="w3-text-blue">LabelsEncoded</span> = <span class="w3-text-orange">Extractor</span>.<span class="w3-text-purple">LabelsExtracted</span>[<span class="w3-text-cyan">"LabelsEncoded"</span>]
+</pre>
+      <p>When you rerun the program, this is the backup interface looks like :</p>
+      <div class="w3-container w3-center">
+        <img src="images/back.PNG" alt="backup" width="100%" height="100%">
+        
+      </div>
+      <br>
+      <li id="examples-datatime">Examples :</li>
+    <p>we are are going to take a look at the classification process using <strong>DataTime</strong> and without , our example building 2 image classifiers models using Tensorflow with the same model architecture
+    but with diffrents datasets</p>
+    <p>our Dataset based on some dangerous animals, this dataset include 3 types of these animals which are <strong>[Spiders, Snakes, Scorpions]</strong></p>
+    <ol type="I" id="Examples">
+      <li class="w3-text-brown">Without DataTime :</li>
+      <p>our Data Distrubution is :</p>
+      <img src="images/dist.png" alt="dist" width="80%" height="80%">
+      <p>With the full number of samples equal to <strong>3047</strong> images.</p>
+      <p>These images are very large because the largest format is <code class="w3-codespan w3-text-blue">1024x1024</code> pixels or maybe more, it depeends on your selection from the OpenImages Datasets.
+      <br>
+      These large formats makes a big problems during the preprocessing of the images so when we resize them to input shape recommended by model architecture, the images becomes too blurry 
+      and this a big problem. We tested a model with an input shape <code class="w3-codespan w3-text-blue">64x64</code> and as a final results the model gives about 37% of accuracy and this
+      The results are expected because our data is unbalanced and these animals are too small in the image and become very blurry.
+    </p>
+      <li class="w3-text-brown">With DataTime :</li>
+      <p>Now we can apply the <strong>DataTime</strong> Extractor on this dataset and this are the results :</p>
+      <div class="w3-row-padding w3-center">
+        
+        <div class="w3-col s6">
+          <img src="images/distdatatime.png" alt="distdatatime" width="100%" height="100%">
+          <span class="w3-text-brown" style="font-size: 14px;"><strong>Figure n°1</strong></span>
+        </div>
+        
+        <div class="w3-col s6">
+          <img src="images/distdatatime2.png" alt="distdatatime2" width="100%" height="100%">
+          <span class="w3-text-brown" style="font-size: 14px;"><strong>Figure n°2</strong></span>
+        </div>
+
+      </div>
+      
+      <p><span class="w3-text-brown"><strong>Figure n°1</strong></span> represant the full number of images Extracted from the first dataset which equal to 3,548 new samples but our data unbalanced specifically on the Scorpions data
+      so <strong>DataTime</strong> can fix that using the balance methods and as you can see the red line is level where <strong>DataTime</strong> stops rendering the data. 
+      <br>
+      In this case <strong>DataTime</strong> generated a balance value which equal to 1205 for each Label.
+      <br>
+      Finally, we are tested an image classification model with the new data and gives as accuracy about 75% and this is expected because Machine Learning & Deep Learning requires a large DataSets for the training process but it's still 
+      a good results on this new DataSet generated by <strong>DataTime</strong>.
+      </p>
+    
+    </ol>
+    
+    </ol>
+  </div>
+  
+  <div class="w3-container w3-padding-64" id="Collection">
+    <div class="w3-container w3-theme-l1">
+      <h2>DataDash - Data Collection</h2>
+    </div>
+      <ol id="lines">
+        <li id="intro-datadash">
+          Introduction :
+        </li>
+        <p class="w3-text-black">
+          Data Collection also is one of the most important things in Machine Learning & Deep Learning tasks, so we can fix that problem with <strong>DataTime</strong> using an
+          interactive and dynamic dashboard which i developed and you can call it with an built-in CLI command called <strong>DataDash</strong> that takes few arguments.
+        </p>
+        <p class="w3-text-black">
+          <strong>DataDash</strong> include the camera feed, images collected paths and names and a Data visualizer based on your own Data collected
+          <br>
+          <strong>DataDash</strong> collect images with a variable ROI with a shape set up by the Developer with an argument on CLI and save only the ROI part on the path Selected.
+          <br>
+          <strong>DataDash</strong> put your collected data on a Real-Time bar visualizer that you can check your Data Distrubution
+        </p>
+        <li id="usage-datadash">Usage - Explanations :</li>
+        <p class="w3-text-black">
+          <strong>DataDash</strong> is a Flask and OpenCv DashBoard based, you can launch it by typing on the Command Line :
+        </p>
+        <pre id="code" class="w3-container w3-black"><span class="w3-text-blue">DataDash</span> --help</pre>
+        <p class="w3-text-black">
+          To run <strong>DataDash</strong>, type <strong>Collector</strong> as default arg :
+        </p>
+        <pre id="code" class="w3-container w3-black"><span class="w3-text-blue">DataDash</span> Collector</pre>
+        <p class="w3-text-black">
+          <strong>DataDash</strong> takes as input the path of your saved Data as you can see here :
+        </p> 
+
+        <p class="w3-text-black">
+          But if you path is not Valid, Don't worry because <strong>DataDash</strong> will generate it automatically
+          <br>
+          <strong>DataDash</strong> takes 2 other optional args, the first one is <code class="w3-codespan w3-text-blue">--camera_index</code> to change the camera index, this index
+          is <code class="w3-codespan w3-text-blue">0</code> as default 
+          <br>
+          The second arg is <code class="w3-codespan w3-text-blue">--window_size</code> that allow you chnage the ROI size, the ROI size is 
+          <code class="w3-codespan w3-text-blue">200</code> as default which means, you ROI shape is <code class="w3-codespan w3-text-blue">200x200</code>
+          <br>
+          Usage:
+        </p>
+
+        <pre id="code" class="w3-container w3-black"><span class="w3-text-blue">DataDash</span>--camera_index 0 --window_size 200</pre>
+        <p class="w3-text-black">
+          Output :
+        </p> 
+        <pre id="code" class="w3-container w3-black"><span class="w3-text-blue">DataDash</span>--camera_index 0 --window_size 400</pre>
+        <p class="w3-text-black">
+          Output :
+        </p> 
+        <p class="w3-text-black">
+          <strong>DataDash</strong> makes you Collected Data on a real-time graph as Bar graph, as you can see here :
+        </p> 
+      </ol>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-l1 w3-center" id="media">
+  <h4>Our Media</h4>
+  <a class="w3-button w3-large w3-sand" href="https://www.facebook.com/aymanabid2015/" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-sand" href="mailto:datatime10@gmail.com" title="gmail" target="_blank"><i class="fa fa-envelope"></i></a>
+  <a class="w3-button w3-large w3-sand" href="https://github.com/aymanabid10/DataTime.git" title="github" target="_blank"><i class="fa fa-github"></i></a>
+  <a class="w3-button w3-large w3-sand" href="https://www.instagram.com/ayman_abid10/" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-sand w3-hide-small" href="https://www.linkedin.com/in/ayman-abid-5a506818b/" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+  <p><strong>datatime10@gmail.com</strong></p>
+  <p>Powered by <a href="index.html#founder" target="_blank">Ayman Abid</a></p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-sand w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+
+</footer>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+
+</script>
+
+</body>
+</html>

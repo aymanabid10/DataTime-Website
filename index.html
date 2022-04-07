@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<title>DataTime - Make You DataTime Accurate</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<body id="myPage">
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closemenu()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+</nav>
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-sand w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-l1" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-theme-l1"><i class="fa fa-home w3-margin-right"></i>Datatime</a>
+  <a href="data.html" class="w3-bar-item w3-button" target="_blank">Docs</a>
+  <a href="#founder" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Founder</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+  <a href="#features" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Features</a>
+  <a href="#results" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Results</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-l1 w3-hide w3-hide-large w3-hide-medium">
+    <a href="data.html" class="w3-bar-item w3-button">Docs</a>
+    <a href="#founder" class="w3-bar-item w3-button">Founder</a>
+    <a href="#team" class="w3-bar-item w3-button">Team</a>
+    <a href="#features" class="w3-bar-item w3-button">Features</a>
+    <a href="#results" class="w3-bar-item w3-button">results</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+  </div>
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="images/data.jpeg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <div class="w3-display-middle">
+    <h1 class="w3-text-teal w3-center"><strong>DataTime</strong></h1>
+    <hp class="w3-text-dark-gery"><strong>Make Your DataTime Accurate</strong></p>
+  </div>
+</div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="founder">
+<h2>MEET OUR FOUNDER</h2>
+<p>Developer - Founder</p>
+
+<div class="w3-container ">
+  <div class="card">
+    <img src="images/me.jpg" alt="Alps" style="width:100%; height:400px">
+    <div class="w3-container w3-center">
+      <h1>Ayman Abid</h1>
+      <p class="title">Founder of DataTime</p>
+      <p>Machine Learning & Embedded Systems Developer</p>
+      <p>Computer Science High School Student</p>
+      <p>Part-Time Freelancer</p>
+      <p>7th place at the national Science and Engineering Fair 2020 Tunisia Powered by Youth for Science Foundation</p>
+      <p>Representant of Tunisia at the 3rd biggest Science fair CASTIC China 2020 (Cancelled due the pandemic)</p>
+      <p>3rd place Winner of HackTheVirus Hackthon 2020 Powered by GoMyCode</p>
+      <a class="links" href="https://www.linkedin.com/in/ayman-abid-5a506818b/"><i class="fa fa-linkedin"></i></a>  
+      <a class="links" href="https://www.facebook.com/aymanabid2015/"><i class="fa fa-facebook"></i></a>
+      <a class="links" href="https://github.com/aymanabid10"><i class="fa fa-github"></i></a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="features">
+
+<div class="w3-third">
+<h2>Our Features</h2>
+<p>DataTime is a 100% Tunisian python library based for image classifications data extraction tasks as well as for data collection using an interactive and dynamic dashboard your can launch it from a CLI command (built-in command) makes powerfull images collected for machine and deep learning tasks in particular computer vision tasks.</p>
+</div>
+
+<div class="w3-third">
+<div class="w3-card w3-white">
+  <img src="images/extract.jpg" alt="extract" style="width:100%" height="150px">
+  <div class="w3-container">
+  <h3>Data Extraction</h3>
+  <h4 class="title">Extract - Balance - Visualize - BackUp</h4>
+  <p>Extract your own image classifier Model data with DataTime with extracting it from the Object Detections Datasets Powered by GoogleAPI Open Images</p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-third">
+<div class="w3-card w3-white">
+  <img src="images/collect.jpg" alt="collection" style="width:100%" height="150px">
+  <div class="w3-container">
+  <h3>Data Collection</h3>
+  <h4 class="title">Choose - Collect - Browse - Visualize</h4>
+  <p>You can Collect your Data with an interactive and dynamic Dashboard with DataTime
+    easily you can run it with a CLI command Called <strong>DataDash</strong>
+  </p>
+  </div>
+  </div>
+</div>
+
+</div>
+
+
+<!-- BOOST Row -->
+<div class="w3-row-padding w3-center w3-padding-64" id="results">
+    <h2>BOOST YOUR MODEL ACCURACY</h2>
+    <p>The power of DataTime datasets Features</p><br>
+    <div class="w3-col s6 w3-center">
+        <h4 class="title">With DataTime</h4><br>
+        <i class="fa fa-image fa fa-5x"></i><br>
+        <h2>Model</h2>
+        <h1><strong>+ 75</strong><i class="fa fa-percent"></i></h1>
+
+        <div class="w3-sand w3-center">
+          <div class="w3-theme-l1" style="height:24px;width:75%"></div>
+        </div>
+
+        <h2><strong>Accurate</strong></h2>
+        
+    </div>
+    <div class="w3-col s6 w3-center">
+      <h4 class="title">Without DataTime</h4><br>
+      <i class="fa fa-image fa fa-5x"></i><br>
+      <h2>Model</h2>
+      <h1><strong>+ 40</strong><i class="fa fa-percent"></i></h1>
+
+      <div class="w3-sand w3-center">
+        <div class="w3-theme-l1" style="height:24px;width:40%"></div>
+      </div>
+      <h2><strong>Accurate</strong></h2>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-l1 w3-center" id="contact">
+  <h4>Our Media</h4>
+  <a class="w3-button w3-large w3-sand" href="https://www.facebook.com/aymanabid2015/" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-sand" href="mailto:datatime10@gmail.com" title="gmail" target="_blank"><i class="fa fa-envelope"></i></a>
+  <a class="w3-button w3-large w3-sand" href="https://github.com/aymanabid10/DataTime.git" title="github" target="_blank"><i class="fa fa-github"></i></a>
+  <a class="w3-button w3-large w3-sand" href="https://www.instagram.com/ayman_abid10/" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-sand w3-hide-small" href="https://www.linkedin.com/in/ayman-abid-5a506818b/" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+  <p><strong>datatime10@gmail.com</strong></p>
+  <p>Powered by <a href="#founder">Ayman Abid</a></p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-sand w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+<script>
+// Script for side navigation
+function openmenu() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function closemenu() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+        },
+    },
+});
+</script>
+
+
+<script>
+
+</script>
+
+</body>
+</html>
